@@ -45,11 +45,11 @@ $ git config user.email
 
 
 
-### Stage하기
+### 원격 저장소 등록하기
 
 
 
-### Commit하기
+### 원격 저장소에 push하기
 
 
 
