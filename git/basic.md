@@ -23,8 +23,6 @@ $ git config user.email
 이메일 출력
 ```
 
- ㅋ
-
 
 
 ### 초기화
@@ -53,11 +51,27 @@ $ git config user.email
 
 
 
+## branch
+
+```touch home.md
+git add home.md
+
+git commit -m 'add home'
+
+git branch about  # about 브랜치 생성
+
+git switch about  # about 브랜치로 이동
+
+git branch  # 현재 브랜치 현황 확인
+```
+
+
+
 ## Summary
 
 | 명령어                     | 설명                                               |
 | -------------------------- | -------------------------------------------------- |
-| `git init`                 | 빈 디렉토리(폴더)를 git 저장소(repo)로 초기와한다. |
+| `git init`                 | 빈 디렉토리(폴더)를 git 저장소(repo)로 초기화한다. |
 | `git add <filename>`       | <filename> 을 Stage에 올린다                       |
 | `git commit -m "filename"` | 커밋한다                                           |
 
