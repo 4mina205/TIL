@@ -9,9 +9,11 @@ git add home.md
 
 git commit -m 'add home'
 
-git branch about  # about 브랜치 생성
+git branch name  # name 브랜치 생성
 
-git switch about  # about 브랜치로 이동
+git switch name  # name 브랜치로 이동
+
+	# git switch -c name # name 브랜치를 생성하며 이동
 
 git branch  # 현재 브랜치 현황 확인
 ```
