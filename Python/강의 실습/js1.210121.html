@@ -1,10 +1,46 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript">
+        document.write("hello");
+        객체.동작(내용);
+    </script>
 </head>
 <body>
+</body>
+</html>-->
 
+
+<!--#############################################################################-->
+<!--#############################################################################-->
+<!--#############################################################################-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        var a=10;
+        var b='k';
+        var c=0.5;
+        var d=-4.2;
+        var e=0x1af; //16진수(ox)
+        var f=01;  //8진수(0)
+        var k='5';
+        document.write(a); //10
+        document.write(b); //k
+        document.write(c); //0.5
+        document.write(d); //-4.2
+        document.write(e); //431
+        document.write(f); //1
+        document.write(k+2);  //k를 5라고 저장했는데 52가 나옴
+        document.write(parseInt(k)+2); //7, parseInt() : 문자로된 숫자를 숫자로 변환 "5"->5
+        document.write(Math.sqrt(16)); //4, square root(제곱근):9의 제곱근은3
+        document.write(3/0); // Infinity
+    </script>
+</head>
+<body>
 </body>
 </html>
