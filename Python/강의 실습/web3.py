@@ -41,8 +41,6 @@ import urllib.request
 # data=data.decode('utf-8')
 # print(data)
 
-from bs4 import BeautifulSoup
-
 # # html='''
 # # <html><body>
 # # <h1>스크래핑</h1>

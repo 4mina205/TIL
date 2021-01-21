@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .disp-none{display:none}
+        .invisible{visibility:hidden}
+        .block1{width:200px;border:3px solid #222}
+        .block2{width:200px;border:3px solid #aaa}
+        .inline1{background:#09c;}
+        .inline2{border:3px solid #999;}
+        .inline-block1{background:#09c;
+        display:inline-block;height:50px}
+        .inline-block2{background:#09c;
+        display:inline-block;width:50px;}
+        .box-container{
+        width:350px;border:2px solid #eeeeee;
+        }
+        .box-container div{
+        paddibg:10px;width:350px;border:2px solid green; background-color:yellow;
+        }
+        #box1{position:static;top:20px;left:30px;}
+        #box2{position:relative;top:30px;left:50px;}
+        #box3{position:absolute;top:50px;right:30px;}
+    </style>
+</head>
+<body>
+<div class="box-container">
+    <div id="box1">static</div>
+    <div id="box2">relative</div>
+    <div id="box3">absolute</div>
+</div>
+</body>
+</html>
