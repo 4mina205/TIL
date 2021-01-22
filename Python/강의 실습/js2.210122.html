@@ -1,0 +1,180 @@
+<!--
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+/*
+객체는 파이썬의 딕셔너리{키:값, 키:값,...}와 비슷
+*/
+
+/*
+var arr=[1,2,3,4];
+document.write(arr.indexOf(3)); //3이라는 자료의 인덱스를 출력
+*/
+
+/*
+var fruits=['apple','banana','orange'];
+fruits.sort(); //오름차순 정렬
+fruits.reverse(); //역순으로 출력, 내림차순 정렬
+document.write(fruits+"<br/>");
+*/
+
+/*
+var fruits=['apple','banana','orange'];
+var v=fruits.splice(1,2);
+document.write(v+"<br/>");
+document.write(fruits+"<br/>");
+*/
+
+/*
+var arr=[1,2,3,4];
+arr.unshift(999);  // 맨 앞에 데이터 추가
+alert(arr);
+document.write(arr.shift()+"<br/>"); //맨 앞의 데이터 제거
+document.write(arr)
+*/
+
+/*
+//alert(arr.length);
+arr.push(5); //append같은 느낌?
+alert(arr);
+p=arr.pop();
+document.write(p)
+*/
+    </script>
+</head>
+<body>
+</body>
+</html>
+-->
+
+<!--
+##########################################################################
+##########################################################################
+-->
+
+<!--
+<script>
+/*
+객체는 파이썬의 딕셔너리{키:값, 키:값,...}와 비슷
+*/
+
+//홍길동 객체를 생성하는 과정
+//사람클래스 -> 홍길동 객체 생성
+
+/*
+// #1
+var hgd={};
+hgd['name']='honggildong';
+hgd['age']='28';
+hgd['gender']='m';
+document.write(hgd['name']);
+*/
+
+/*
+// #2, hgd객체 생성, 속성 : name, age, gender, birth
+//속성값 : honggildong, 28, m,..
+var hgd={
+'name':'roh yoon jae',
+'age':'28',
+'gender':'m'
+};
+hgd.birth=1994;         //데이터 접근시.(점)을 사용
+document.write(hgd['birth']);
+*/
+
+/*
+// #3. new 이용
+//new 클래스명
+new Object();   //단군할아버지
+
+//사람 클래스 -> 홍길동 객체
+</script>
+*/-->
+
+<!--
+/*
+동물 클래스 설계
+                  동물클래서(먹는다, 잠잔다, 다닌다)-상속(위(부모)->아래(자식))
+파충류         양서류         포유류         갑각류
+뱀(기어다닌다)
+독백, 무독뱀
+독사 살모사 꽃뱀
+
+임꺽정객체=new사람():
+임꺽정객체.먹는다();  o
+임꺽정객체.코딩한다();  o
+임꺽정객체.기어다닌다();  x
+
+이순신객체=new사람():
+이순신객체.코골면서잠잔다() 매서드 오버라이딩
+
+상속 : 부모클래스가 가지고 있는 동작, 속성 등을 자식클래스에게 물려주는 것
+오버라이딩:부모가 물려준 동작을 자식이 변경하는 것
+자식은 부모로부터 물려받은 동작외에 다른 동작을 추가할 수 있음
+
+====> 객체 지향 설계 ====> 객체 지향 프로그래밍
+*/-->
+
+<!--
+##########################################################################
+##########################################################################
+-->
+<!--
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var hgd=new Object();
+        hgd['name']='honggildong';
+        hgd['age']=28;
+        hgd['gender']='m';
+
+        for(k in hgd){
+        document.write(k+"<br/>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
+-->
+
+
+<!--
+
+
+사람클래스(속성-성별,나이,이름,..;동작(함수,매서드)-숨쉰다,먹는다,잔다..;)->객체
+
+
+
+-->
+
+<!--
+##########################################################################
+##########################################################################
+-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+    var hgd={
+        'list':{   //매서드 정의
+            'name':'roh yoon jae',
+            'age':'28',
+            'gender':'m'
+            },
+        'show':function(){
+            for(var n in this.list){
+                document.write(n+":"+this.list[n]+"<br/>");
+                }
+            }
+        };
+    hgd.show();
+    </script>
+</head>
+<body>
+</body>
+</html>
