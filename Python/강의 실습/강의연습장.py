@@ -1,3 +1,28 @@
+
+######################################################################################
+######################################################################################
+
+# def seperate1(text):
+#     import re
+#     print(("".join(re.findall("\d",text))))
+#     print(("".join(re.findall("\D",text))))
+# seperate1("c910m6ia 1ho")
+#
+#
+def seperate2(text):
+    num=str()
+    for i in list(text):
+        if i in list(map(str,range(10))):
+            num+=i
+            text=text.replace(i,"")
+    print(num)
+    print(text)
+seperate2("c910m6ia 1ho")
+
+
+######################################################################################
+######################################################################################
+
 # def ivscom(me):
 #     import random as r
 #     rsp=['가위','바위','보']
@@ -10,78 +35,117 @@
 #         print("아쉽...")
 # ivscom("가위")
 
+######################################################################################
+######################################################################################
 
-# def gorotto():
-#     a=int(input("몇 회차 까지 진행하시겠습니까?"))
+# def golotto():
 #     import random as r
-#     rottopot=range(1,46)
-#     resset=["꽝", "꽝", "꽝", "4등", "3등", "2등", "1등"]
-#     perfect=[]
+#     a=int(input("진행 회차 입력"))
+#     lottopot=range(1,46)
+#     outset=["꽝", "꽝", "꽝", "4등", "3등", "2등", "1등"]
+#     result=[]
 #     for j in range(1,a+1):
-#         lucknum=r.sample(rottopot,6)
-#         print("#",j," 회차",sep="")
-#         for i in range(int(input("로또를 몇개 구매하시겠습니까?"))):
+#         lucknum=r.sample(lottopot,6)
+#         print("# {}회차".format(j))
+#         for i in range(int(input("구매 개수 입력"))):
 #             if i==0:
 #                 print("이번주 당첨번호 :",lucknum)
-#             yournum=r.sample(rottopot,6)
-#             good=len(list(set(lucknum) & set(yournum)))
-#             perfect.append(resset[good])
-#             print("추첨번호는",yournum,"입니다.",good,"개 일치",resset[good])
-#         print("="*10)
+#             yournum=r.sample(lottopot,6)
+#             correct=len(list(set(lucknum) & set(yournum)))
+#             result.append(outset[correct])
+#             print("{}.{} ==> {}개 일치 {}".format(i+1,yournum,correct,outset[correct]))
+#         print("="*40)
 #     print("전체 결과")
 #     for i in ["1등","2등","3등","4등","꽝"]:
-#         print(i,perfect.count(i),"개")
-# gorotto()
+#         print(i,result.count(i),"개")
+# golotto()
 
 
+######################################################################################
+######################################################################################
 
-# def seperate1(text):
-#     import re
-#     print(("".join(re.findall("\d",text))))
-#     print(("".join(re.findall("\D",text))))
-# seperate1("c910m6ia 1ho")
-#
-#
-# def seperate2(text):
-#     num=str()
-#     for i in list(text):
-#         if i in list(map(str,range(10))):
-#             num+=i
-#             text=text.replace(i,"")
-#     print(num)
-#     print(text)
-# seperate2("c910m6ia 1ho")
-
-
-#
-#
-def golotto():
-    import random as r
-    a=int(input("진행 회차 입력"))
-    lottopot=range(1,46)
-    outset=["꽝", "꽝", "꽝", "4등", "3등", "2등", "1등"]
-    result=[]
-    for j in range(1,a+1):
-        lucknum=r.sample(lottopot,6)
-        print("# {}회차".format(j))
-        for i in range(int(input("구매 개수 입력"))):
-            # if i==0:
-            #     print("이번주 당첨번호 :",lucknum)
-            yournum=r.sample(lottopot,6)
-            correct=len(list(set(lucknum) & set(yournum)))
-            result.append(outset[correct])
-        #     print("{}.{} ==> {}개 일치 {}".format(i+1,yournum,correct,outset[correct]))
-        # print("="*40)
-    print("전체 결과")
-    for i in ["1등","2등","3등","4등","꽝"]:
-        print(i,result.count(i),"개")
-golotto()
+# def daebak():
+#     import random as r
+#     lottopot=range(1,46)
+#     outset=["꽝", "꽝", "꽝", "5등", "4등", "3등", "1등"]
+#     result=list()
+#     a = int(input("진행 회차 입력"))
+#     for j in range(a):
+#         allnum=r.sample(lottopot,7)
+#         lucknum=allnum[:6]
+#         bonus=allnum[-1]
+#         print("# {}회차".format(j+1))
+#         for i in range(int(input("구매 개수 입력"))):
+#             if i==0:
+#                 print("이번주 당첨번호 : {}+[{}]".format(lucknum,bonus))
+#             yournum=r.sample(lottopot,6)
+#             correct=len(list(set(lucknum) & set(yournum)))
+#             if correct==5 and bonus in yournum:
+#                 result.append("2등")
+#                 print("{}.{} ==> {}개 + 보너스 일치 2등".format(i+1,yournum,correct))
+#             else:
+#                 result.append(outset[correct])
+#                 print("{}.{} ==> {}개 일치 {}".format(i+1,yournum,correct,outset[correct]))
+#         print("="*40)
+#     print("전체 결과")
+#     for i in ["1등","2등","3등","4등", "5등", "꽝"]:
+#         print(i,result.count(i),"개")
+# daebak()
 
 
 
 
+# def daebak():
+#     import random as r
+#     lottopot=range(1,46)
+#     outset=["꽝","꽝", "꽝", "꽝", "4등", "3등", "1등"]  #나중에 결과 출력할 때 사용 2등은 따로 판별
+#     result=list()                                          #전체 결과 합산을 위한 빈 리스트
+#     a = int(input("진행 회차 입력"))
+#     for j in range(a):              #회차 돌리기 위한 for문
+#         allnum=r.sample(lottopot,7) #보너스 포함 7개 뽑기
+#         mainnum=allnum[:6]             #앞에 6개는 메인
+#         bonus=allnum[-1]            #뒤에 1개는 보너스
+#         print("# {}회차".format(j+1))
+#         for i in range(int(input("구매 개수 입력"))):     #회차당 구매 개수를 위한 for문
+#             if i==0:                                    #각 회차의 첫 번째 줄에는 당첨번호 출력
+#                 print("이번주 당첨번호 : {}+[{}]".format(mainnum,bonus))
+#             yournum=r.sample(lottopot,6)
+#             correct=len(list(set(mainnum) & set(yournum))) #메인번호와 내번호의 교집합 개수
+#             if correct==5 and bonus in yournum:         #맞은 개수가 5개라면 보너스 번호로 2등 선별
+#                 result.append("2등")
+#                 print("{}.{} ==> {}개 + 보너스 일치 2등".format(i+1,yournum,correct))
+#             else:
+#                 result.append(outset[correct])    #맞은 개수에 해당하는 결과를 전체 결과 리스트에 저장
+#                 print("{}.{} ==> {}개 일치 {}".format(i+1,yournum,correct,outset[correct]))
+#         print("="*40)
+#     print("전체 결과")
+#     for i in ["1등","2등","3등","4등","꽝"]:
+#         print(i,result.count(i),"개")
+# daebak()
 
 
+
+# def golotto():
+#     import random as r
+#     a=int(input("진행 회차 입력"))
+#     lottopot=range(1,46)
+#     outset=["꽝", "꽝", "꽝", "4등", "3등", "2등", "1등"]       #나중에 결과 출력할 때 사용
+#     result=[]                                                #전체 결과 합산을 위한 빈 리스트
+#     for j in range(1,a+1):                                   #회차 돌리기 위한 for문
+#         lucknum=r.sample(lottopot,6)                         #해당 회차의 당첨번호
+#         print("# {}회차".format(j))
+#         for i in range(int(input("구매 개수 입력"))):          #로또 구매 개수를 위한 for문
+#             if i==0:                                         #각 회차의 첫 번째 줄에는 당첨번호 출력
+#                 print("이번주 당첨번호 :",lucknum)
+#             yournum=r.sample(lottopot,6)
+#             correct=len(list(set(lucknum) & set(yournum)))   #당첨번호와 추첨번호의 교집합 개수
+#             result.append(outset[correct])           #맞은 개수에 해당하는 결과를 전체 결과 리스트에 저장
+#             print("{}.{} ==> {}개 일치 {}".format(i+1,yournum,correct,outset[correct]))
+#         print("="*40)
+#     print("전체 결과")
+#     for i in ["1등","2등","3등","4등","꽝"]:
+#         print(i,result.count(i),"개")
+# golotto()
 
 
 
