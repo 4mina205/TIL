@@ -1,21 +1,10 @@
-n=int(input())
-for i in range(n):
-    a,b,c=map(int,input().split())
-    z=divmod(c,a)
-    if z[1] == 0:
-        print(((z[1] + 1) * 100) + a)
+a=100
+q=0
+w=0
+e=0
+while q<a:
+    if q<a:
+        q+
+
     else:
-        print(((z[1]) * 100) + (z[0] + 1))
-
-
-
-# a=1
-# c=5
-# z=divmod(c,a)
-# if z[1]==0:
-#     print(((z[1]+1) * 100) + (z[0]))
-# else:
-#     print(((z[1]) * 100) + (z[0] + 1))
-#
-# # print(((z[1]) * 100) + (z[0] + 1))
-
+        break

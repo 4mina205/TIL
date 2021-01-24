@@ -9,15 +9,41 @@
 # seperate1("c910m6ia 1ho")
 #
 #
-def seperate2(text):
-    num=str()
-    for i in list(text):
-        if i in list(map(str,range(10))):
-            num+=i
-            text=text.replace(i,"")
-    print(num)
-    print(text)
-seperate2("c910m6ia 1ho")
+# def seperate2(text):
+#     num=str()
+#     numstr=list(map(str,range(10)))
+#     textlist=list(text)
+#     for i in textlist:
+#         if i in numstr:
+#             num+=i
+#             text=text.replace(i,"")
+#     print(num)
+#     print(text)
+# seperate2("c910m6ia 1ho")
+
+# def seperate3(text):
+nums=list(map(chr,range(48,58)))
+text=list("c910m6ia 1ho")
+comp=list("c910m6ia 1ho")
+a=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+num=list()
+for i in text:
+    if i in a:
+        num += comp.pop()
+        print(comp)
+#
+# print(num)
+# print(text)
+# seperate3("c910m6ia 1ho")
+# 48 57
+
+# a=["a","b","c","c"]
+# b=[]
+# b=a.pop(0)
+# print(ord("9"))
+# print(a)
+# print(b)
+# print(list(map(chr,range(48,58))))
 
 
 ######################################################################################
