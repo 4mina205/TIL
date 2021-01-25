@@ -22,15 +22,7 @@
 # seperate2("c910m6ia 1ho")
 
 # def seperate3(text):
-nums=list(map(chr,range(48,58)))
-text=list("c910m6ia 1ho")
-comp=list("c910m6ia 1ho")
-a=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-num=list()
-for i in text:
-    if i in a:
-        num += comp.pop()
-        print(comp)
+
 #
 # print(num)
 # print(text)

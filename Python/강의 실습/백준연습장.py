@@ -1,10 +1,8 @@
-a=100
-q=0
-w=0
-e=0
-while q<a:
-    if q<a:
-        q+
+def fibo(a):
+    if a==0:
+        return 0
+    if a==1:
+        return 1
+    return fibo(a-1)+fibo(a-2)
 
-    else:
-        break
+print(fibo(int(input())))
