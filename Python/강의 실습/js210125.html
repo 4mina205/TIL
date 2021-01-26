@@ -1,3 +1,5 @@
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,28 +9,165 @@
 <body>
 <h1>JavaScript</h1>
 <script>
-document.write(2+3+'<br/>');
-//alert("hello world".length)
-alert("hello world".indexOf('o'))
-alert("hello world".indexOf('O'))
-</script>
-================================================================
-<!--
-버튼을 클릭했을 떄, 메시지가 출력
-~'했을 때'에 해당되는 자바스크립트 이벤트를 지정하는 속성명은
-접두어가 on으로 시작되는 함수를 정의하여 이벤트 처리
-속성명 = on + "이벤트명"
-ex) onclick = 클릭했을때
--->
-//length, ... : 어트리뷰트==프로퍼티==속성
-//alert(), ... : 함수 == 매서드
+document.write("hello world");
+document.write(2+3+"<br/>");
+//alert("hello world".length);
+//alert("hello world".toUpperCase());    //cast a to b
+//장고(파이썬 웹사이트 프레임웍)
+//length, ... : 어트리뷰트 == 프로퍼티 == 속성
+//alert(), ... : 함수 == 메서드
+//자연어처리 : Hello, hello, HELLO, ...=>hello통일
 
-<input type="button" value="click me" onclick="alert('why click me')">
-<input type="text" onclick="alert('간단하게 작성해 주세요')">
-<br/>
-ID:<input type="text" onchange="alert('변화가 생김')"/>
-<br/>
-PW:<input type="text" onkeydown="alert('key down')"/>
-<br/>
+//alert("hello world".indexOf('o'));
+//"hello world" 문자열에서 'o'의 인덱스?
+//alert("hello world".indexOf('O'));
+
+//alert("hello world".indexOf('hi'));
+//alert("hello world".indexOf('hello'));
+
+//alert("hello world".indexOf('world'));
+
+//alert("hello world".indexOf('world'));
+
+document.write("    hi      ".trim()+"<br/>");
+document.write("&nbsp&nbsp&nbsp hi &nbsp&nbsp&nbsp hello"+"<br/>");
+id:admin
+
+
+
+</script>
+2+3
+버튼을 클릭했을 때, 메시지가 출력
+'~했을 때'에 해당되는 자바스크립트 이벤트를 지정하는 속성명은
+접두어가 on 으로 시작되는 함수를 정의하여 이벤트 처리
+속성명 = on + "이벤트명"
+ex) onclick= 클릭했을때
+<input type="button" value="click me" onclick="alert('why click me?')">
+ID:<input type="text"  onchange="alert('changed')"/>
+<br>
+PW:<input type="text" onkeydown="alert('key down')" />
+<br>
+
+
 </body>
+</html>
+
+
+admin-->
+
+
+
+<html>
+    <head>
+        <title>WEB1 - JavaScript</title>
+        <meta charset="utf-8">
+        <style>
+            .js{
+            font-weight:bold;
+            color:red;
+            }
+            #first{
+            color:green;
+            }
+            span{
+            color:blue;
+            }
+        </style>
+    </head>
+    <body>
+<!--    <span class="js">my script</span>-->
+<!--    <span class="js" id="first">my script</span>-->
+<!--    <span class="js" >my script</span>-->
+<!--    <span>my script</span>-->
+<!--        <h1><a href="index.html">WEB</a></h1>-->
+<!--    <h2 style="background-color:coral; color:skyblue">JavaScript</h2>-->
+<!--    <p class="js">Python</p>-->
+
+<!--  <input type="button" value="black" onclick="
+  document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+">
+    <input type="button" value="white" onclick="document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+">-->
+
+
+<!--
+<h1>1==1</h1>
+<h1>1===1</h1>
+<h1>2>1</h1>
+<h1>2&gt;1</h1>
+<h1>2&lt;1</h1>
+
+<script>
+document.write(1==1);
+document.write(1===1);
+document.write(1===2);
+document.write(1==2);
+document.write(2>1);
+</script>
+-->
+
+<!--
+
+ <input type="button" value="black" onclick="
+  document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+">
+    <input type="button" value="white" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+">
+
+&lt;!&ndash;black버튼을 클릭했을 때, myblack이라는 아이디를 갖고 있는 대상의 value가
+black과 같다면&ndash;&gt;
+
+<input id="myblack" type="button" value="black" onclick="
+if(document.querySelector('#myblack').value=='black'){
+document.querySelector('#myblack').value='white';
+  document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+} else{
+document.querySelector('#myblack').value='black';
+    document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+}
+">
+-->
+
+<!--
+배경이 black 상태에서 toggle을 누르면 그대로,
+배경이 white          "  "          반전
+-->
+
+<input type="button" value="black" onclick="
+var target=document.querySelector('body');
+if(this.value=='black'){
+target.style.backgroundColor='black';
+target.style.color='white';
+this.value='white';
+} else {
+target.style.backgroundColor='white';
+target.style.color='black';
+this.value='black';
+}
+">
+    <h1>javascript</h1>
+    <p>java script html css</p>
+
+<input type="button" value="white" onclick="
+var target=document.querySelector('body');
+if(this.value=='white'){
+target.style.backgroundColor='white';
+target.style.color='black';
+this.value='black';
+} else {
+target.style.backgroundColor='black';
+target.style.color='white';
+this.value='white';
+}
+">
+
+
+    </body>
 </html>
